@@ -1,0 +1,8 @@
+[{
+    "channel_name":"synk",
+    "hooks":{
+        "linear":{
+            "end_point":"https://api.linear.app/graphql"
+        }
+    }
+}]
