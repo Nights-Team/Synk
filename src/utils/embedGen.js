@@ -10,6 +10,8 @@ module.exports = async (data) => {
     embed.setAuthor(data.user.data.user.name, data.user.data.user.avatarUrl);
     embed.setTitle(`New Comment on \`${issue[0].node.title}\``).setURL(data.data.url);
     embed.addField('\u200B', data.data.data.body);
+    embed.setColor(issue[0].node.project.color);
+    embed.setFooter(`${issue[0].node.project.name}/${issue[0].node.team.name}`);
     return embed;
   }
 };

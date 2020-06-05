@@ -10,6 +10,13 @@ module.exports = async (issueId) => {
                 node {
                     id
                     title
+                    project{
+                        name
+                        color
+                    }
+                    team{
+                        name
+                    }
                 }
                 }
             
