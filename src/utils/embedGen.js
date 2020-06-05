@@ -7,8 +7,7 @@ module.exports = async (data) => {
   if (data.data.type === 'Comment' && data.data.action === 'create') {
     // handeling comment here
     const embed = new Discord.MessageEmbed();
-
-    embed.setAuthor(data.user.data.user.name);
+    embed.setAuthor(data.user.data.user.name, data.user.data.user.avatarUrl);
     embed.setTitle(`New Comment on \`${issue[0].node.title}\``).setURL(data.data.url);
     embed.addField('\u200B', data.data.data.body);
     return embed;

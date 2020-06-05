@@ -8,6 +8,7 @@ module.exports = async (userId) => {
         user(id: "${userId}") {
             id
             name
+            avatarUrl
           }
       }`;
   const body = JSON.stringify({ query });
