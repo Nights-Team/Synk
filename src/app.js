@@ -3,7 +3,6 @@ const express = require('express');
 const discord = require('discord.js');
 const bodyParser = require('body-parser');
 const { channel_name: channelName } = require('../config.json')[0];
-const { getUser } = require('./utils');
 const embedGen = require('./utils/embedGen');
 
 const client = new discord.Client({ disableEveryone: true });
@@ -18,11 +17,13 @@ app.post('/hooks/linear', async (req, res) => {
   // get linear data
   const { body: data } = req;
   // get user data from api
-  const user = await getUser(data.data.userId);
-  const embed = await embedGen({ data, user });
+  const { embed } = await embedGen({ data });
   // get channel
-  const channel = client.channels.cache.find((c) => c.name === channelName);
-  channel.send(embed);
+
+  if (embed) {
+    const channel = client.channels.cache.find((c) => c.name === channelName);
+    channel.send(embed);
+  }
 });
 // firing the server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
