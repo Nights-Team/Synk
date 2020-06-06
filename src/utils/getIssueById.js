@@ -27,7 +27,7 @@ module.exports = async (issueId) => {
   const response = await fetch(endPoint, {
     method: 'POST',
     headers: {
-      Authorization: 'o3PWFIJtzdK4YH6NhXNLsPa5tg2wZ2OYQqU9Cypf',
+      Authorization: process.env.LINEAR_API_KEY,
       'Content-Type': 'application/json',
     },
 

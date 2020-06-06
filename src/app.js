@@ -2,13 +2,14 @@
 const express = require('express');
 const discord = require('discord.js');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const { channel_name: channelName } = require('../config.json')[0];
 const embedGen = require('./utils/embedGen');
 
 const client = new discord.Client({ disableEveryone: true });
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Tell express to use body-parser's JSON parsing
 app.use(bodyParser.json());
@@ -31,4 +32,4 @@ client.on('ready', () => {
   console.log('The bot is up and running!');
 });
 // run discord bot
-client.login('NzE4MjE4MTE3NTk5MTk5MzMy.Xtlq7g.iC0C42QNyrO7_Hd9N4CIN4pRNTI');
+client.login(process.env.BOT_KEY);
