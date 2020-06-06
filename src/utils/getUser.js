@@ -11,7 +11,6 @@ module.exports = async (userId) => {
             avatarUrl
           }
       }`;
-  console.log(userId);
   const body = JSON.stringify({ query });
   const response = await fetch(endPoint, {
     method: 'POST',
