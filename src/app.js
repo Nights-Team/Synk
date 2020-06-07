@@ -25,6 +25,7 @@ app.post('/hooks/linear', async (req, res) => {
     const channel = client.channels.cache.find((c) => c.name === channelName);
     channel.send(embed);
   }
+  res.send();
 });
 // firing the server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
