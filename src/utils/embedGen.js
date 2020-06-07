@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const getIssueById = require('./getIssueById');
-const { getUser } = require('.');
+const { getUser, getStateById } = require('.');
 
 // eslint-disable-next-line consistent-return
 module.exports = async (data) => {
@@ -33,6 +33,23 @@ module.exports = async (data) => {
     embed.addField('Issue Description', data.data.data.description ? data.data.data.description : 'No description');
     embed.addField('Assigned', assignedTo ? assignedTo.data.user.name : 'Unassigned');
 
+    return { embed };
+  }
+  if (data.data.type === 'Issue' && data.data.action === 'update') {
+    let oldState = data.data.updatedFrom.stateId;
+    let newState = data.data.data.stateId;
+    // If state didn't change
+    if (oldState === newState) return false;
+    // Else, send an update
+    oldState = await getStateById(oldState);
+    newState = await getStateById(newState);
+    if (!newState || !oldState) return false;
+    const user = await getUser(data.data.data.creatorId);
+    const embed = new Discord.MessageEmbed();
+    embed.setColor(newState.color);
+    embed.setAuthor(user.data.user.name, user.data.user.avatarUrl);
+    embed.setTitle(data.data.data.title).setURL(data.data.url);
+    embed.addField('\u200B', `changed status to **${newState.name}**`);
     return { embed };
   }
   return false;

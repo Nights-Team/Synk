@@ -1,3 +1,4 @@
 const getUser = require('./getUser');
+const getStateById = require('./getStateById');
 
-module.exports = { getUser };
+module.exports = { getUser, getStateById };

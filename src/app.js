@@ -28,9 +28,9 @@ app.post('/hooks/linear', async (req, res) => {
   res.send();
 });
 // firing the server
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT} \n🌖 Initializing Bot`));
 client.on('ready', () => {
-  console.log('The bot is up and running!');
+  console.log('✔️  Bot is ready');
 });
 // run discord bot
 client.login(process.env.BOT_KEY);
