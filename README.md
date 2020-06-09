@@ -1,9 +1,12 @@
 # Synk 
 Discord bot to sync Linear updates with a Discord channel.
 
-# Screenshots
+# Screenshots :muscle:
+![Create Issue](https://i.postimg.cc/yxwqQzts/Screenshot-from-2020-06-09-22-22-52.png)
 
+![Comment](https://i.postimg.cc/brLDk3Bx/Screenshot-from-2020-06-09-20-00-15.png)
 
+![Move between stages](https://i.postimg.cc/HWSk0cL9/Screenshot-from-2020-06-09-20-00-24.png)
 
 # Getting started :books:
 First things first! you need to edit two files 
@@ -17,7 +20,7 @@ Duplicate `env.template` and fill the values with the following :
 
 * `channel_name` : we usually use `synk`, but you can do whatever you feel like :100:
 
-# Scripts
+# Setup :runner:
 
 ```sh
 cd SynK
