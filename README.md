@@ -13,7 +13,7 @@ First things first! you need to edit two files
 
 ### .env
 Duplicate `env.template` and fill the values with the following : 
-* `LINEAR_API_KEY` : Linear provides personal API keys trough they settings page, [Get yours](https://linear.app/settings/api)
+* `LINEAR_API_KEY` : Linear provide you with a personal API key trough their settings page, [Get it now](https://linear.app/settings/api)
 * `BOT_KEY` : Your discord bot token, [follow these instructions to get it](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)
 
 ### config.json
