@@ -2,11 +2,11 @@
 Discord bot to sync Linear updates with a Discord channel.
 
 # Screenshots :muscle:
-![Create Issue](https://i.postimg.cc/yxwqQzts/Screenshot-from-2020-06-09-22-22-52.png)
+![M not writing anything](https://i.postimg.cc/4yYRPC4z/Screenshot-from-2020-06-16-21-17-17.png)
 
-![Comment](https://i.postimg.cc/brLDk3Bx/Screenshot-from-2020-06-09-20-00-15.png)
+![M not writing anything](https://i.postimg.cc/4x6kBQGF/Screenshot-from-2020-06-16-21-16-27.png)
 
-![Move between stages](https://i.postimg.cc/HWSk0cL9/Screenshot-from-2020-06-09-20-00-24.png)
+![M not writing anything](https://i.postimg.cc/gJ0Cc9Zf/Screenshot-from-2020-06-16-21-16-05.png)
 
 # Getting started :books:
 First things first! you need to edit two files 
